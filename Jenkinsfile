@@ -17,7 +17,7 @@ pipeline {
       steps {
 			sh '''
 				. .venv/bin/activate
-				pytest  application_test.py
+				pytest --junit-xml test-reports/results.xml application_test.py
 				
 			'''
        
